@@ -23,6 +23,10 @@
             $stmt->bind_param("sss", $name, $email, $message);
             $stmt->execute();
             echo "<h1 class='success'>Data berhasil disimpan</h1>";
+            echo "<h2 class='success'>Nama: $name</h2>";
+            echo "<h2 class='success'>Email: $email</h2>";
+            echo "<h2 class='success'>Pesan: $message</h2>";
+            echo "<a href='index.html' class='btn'>Kembali</a>";
             $stmt->close();
             $conn->close();
         }
